@@ -1,0 +1,154 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrarse</title>
+    <link rel="stylesheet" href="../CSS/formulario.css">
+    <link rel="shortcut icon" href="../images/logopa.png" type="image/x-icon">
+    <link rel="shortcut icon" href="images/we1y4RBg5GDDQAAAABJRU5ErkJggg.png" type="image/x-icon">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <script >
+        document.addEventListener('DOMContentLoaded', () => {
+            let db;
+
+            //function openDb(){
+            let request = indexedDB.open('veterinaria', 1);
+            request.onsuccess = function(evt) {
+                db = this.result;
+                console.log("openDB DONE!")
+            }
+            request.onerror = function(evt) {
+                console.error("openDB:", evt.target.errorCode)
+            }
+
+            request.onupgradeneeded = function (evt){
+                let store = evt.currentTarget.result.createObjectStore('usuario', { keyPath: 'id_usuario', autoIncrement: true });
+
+                store.createIndex('correo', 'correo', {unique : true } );
+                store.createIndex('contrasena', 'contrasena', {unique : false } );
+                store.createIndex('nombre', 'nombre', {unique : false } );
+                store.createIndex('apellido', 'apellido', {unique : false } );
+                //store.createIndex('direccion', 'direccion', {unique : false } );
+                store.createIndex('telefono', 'telefono', {unique : false } );
+                store.createIndex('tipo_usuario', 'tipo_usuario', {unique : false } );
+            }
+            //}
+
+            //openDb();
+
+            //let consulta = getObjectStore('usuario', 'readwrite');
+            //consulta.add({nombre: 'pepito', apellido: 'perez', telefono: '7123718724', direccion: 'blah blah', correo: 'pepito@gmail.com', contrasena: 'holi123', tipo: 'cliente'});
+
+            function getObjectStore(store_name, mode) {
+                let transaccion = db.transaction('usuario', 'readwrite');
+                return transaccion.objectStore('usuario');
+            }
+
+            const form = document.querySelector('form'),
+                nombreUsuario = document.querySelector('#nombre'),
+                apellidoUsuario = document.querySelector('#apellido'),
+                telefonoUsuario = document.querySelector('#telefono'),
+                //direccionUsuario = document.querySelector('#direccion'),
+                correoUsuario = document.querySelector('#correo'),
+                passUsuario = document.querySelector('#pass'),
+                tipoUsuario = document.querySelector('#tipo-usuario');
+
+            const boton = document.getElementById('form_registro--Registrar');
+            console.log(boton);
+            boton.addEventListener('click', registrarDatos);
+            function registrarDatos(e){
+                e.preventDefault();
+
+                const nuevoUsuario = {
+                    nombre : nombreUsuario.value,
+                    apellido : apellidoUsuario.value,
+                    telefono : telefonoUsuario.value,
+                    //direccion : direccionUsuario.value,
+                    correo : correoUsuario.value,
+                    contrasena : passUsuario.value,
+                    tipo : tipoUsuario.value
+                }
+
+                getObjectStore('usuario', 'readwrite').add(nuevoUsuario);
+            }
+
+        })
+
+    </script>
+    <div class="fondo_formulario">
+
+    <div class="barra">
+        <nav>
+            <div class="navbar">
+                <ul class="options">
+
+                    <li><a href="../index.html"><input type="button" Value="Inicio" class="Boton--cabecera"></a></li>
+                    <li><a href="../index.html #servicios"><input type="button" Value="Servicios" class="Boton--cabecera"></a></li>
+                    <li><a href="../index.html #galeria"><input type="button" Value="Galeria" class="Boton--cabecera"></a></li>
+                    <li><a href="../index.html #contacto"><input type="button" Value="Contacto" class="Boton--cabecera"></a></li>
+                    <li><a href="login.html" class="login">INICIAR SESIÓN</a></li>
+
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    
+
+        <!--<center>-->
+
+            <form class="form_Registro">
+            
+                <div class="form_registro--Parte1">
+
+                    <h3 class="form_inicio--titulo1">Inicie Sesion</h3>
+
+                    <a href="login.html"><input type="button" name="iniciar" class="form_registro--iniciar" value="Iniciar"></a>
+
+
+
+                </div><div class="form_registro--Parte2">
+                    
+                    <h3 class="form_registro--titulo2">Registra Tus Datos:</h3>
+
+                    <input type="text" name="correo" id= "nombre" class="form_registro--nombre" style="outline: none;" placeholder="Nombre">
+
+                    <input type="text" name="correo" id= "apellido" class="form_registro--nombre" style="outline: none;" placeholder="Apellido">
+
+                    <input type="text" name="correo" id= "telefono" class="form_registro--nombre" style="outline: none;" placeholder="Telefono">
+
+                    <input type="text" name="correo" id= "correo" class="form_registro--nombre" style="outline: none;" placeholder="Correo">
+
+                    <input type="password" name="correo" id= "pass" class="form_registro--nombre" style="outline: none;" placeholder="Contraseña">
+
+                    <input type="password" name="correo" id= "confirmar-contrasena" class="form_registro--nombre" style="outline: none;" placeholder="Confirme su Contraseña">
+                    
+                    <h3 class="Titulo_selector">Tipo De usuario</h3>
+
+                    <div class="Contenedor_selector">
+
+                        <input type="radio" name="usuario_tipo" id= "tipo-usuario" class="form_inicio--selector"> <label for="radio" class="selector">Veterinario</label>
+                    
+                    </div><div class="Contenedor_selector2">
+
+                        <input type="radio" name="usuario_tipo" checked class="form_inicio--selector"> <label for="radio" class="selector">cliente</label>
+                    
+                    </div>
+
+                    <a href="Registro.html" id="form_registro--Registrar"><input type="button" name="Registrate" value="Registrate!!" class="form_registro--Registrar"></a>
+
+                </div>
+
+            </form>
+
+        <!--</center>-->
+
+    </div>
+
+</body>

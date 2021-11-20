@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Pago</title>
+    <link rel="stylesheet" href="CSS/pago.css">
+    <link rel="shortcut icon" href="images/logopa.png" type="image/x-icon"> 
+</head>
+<body>
+    <div class='container'>
+        <div class='window'>
+          <div class='order-info'>
+            <div class='order-info-content'>
+              <h2>Resumen del Pedido</h2>
+                      <div class='line'></div>
+              <table class='order-table'>
+                <tbody>
+                  <tr>
+                    <td><img src='https://escuelafarmacia.com/wp-content/uploads/cl%C3%ADnica-veterinaria.jpg' class='full-width'></img>
+                    </td>
+                    <td>
+                      <br> <span class='thin'>Consulta</span>
+                      <br><span class='thin small'> Chequeo y vacunas<br><br></span>
+                    </td>
+      
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class='price'>$99.99</div>
+                    </td>
+                  </tr>
+                </tbody>
+      
+              </table>
+              <div class='line'></div>
+              <div class='total'>
+                <span style='float:left;'>
+                  <div class='thin dense'>IVA 12%</div>
+                  TOTAL
+                </span>
+                <span style='float:right; text-align:right;'>
+                  <div class='thin dense'>$11.99</div>
+                  $111.98
+                </span>
+              </div>
+      </div>
+      </div>
+              <div class='credit-info'>
+                <div class='credit-info-content'>
+                  <table class='half-input-table'>
+                    Seleccione su tarjeta: 
+                    
+                    <select name="Tipo_de_Tarjeta" class="Selector_tarjetas" style="outline: none;">
+
+                      <option value="Visa" class="Opcion">Visa</option>
+                      <option value="Master" class="Opcion">Master Card</option>
+                      <option value="American" class="Opcion">American Express</option>
+
+                    </select>
+                  </table>
+                  <img src="images/tarjetas1.png" height='150' class='logo-img' id='logo-img'></img>
+                  Numero de Tarjeta
+                  <input class='input-field' style="outline: none;" placeholder="Tarjeta"></input>
+                  Titular de la Tarjeta
+                  <input class='input-field' style="outline: none;" placeholder="Titular"></input>
+                  <table class='half-input-table'>
+                    <tr>
+                      <td> Expiración
+                        <input class='input-field' style="outline: none;" placeholder="Expiración"></input>
+                      </td>
+                      <td>Código de Seguridad
+                        <input class='input-field' style="outline: none;" placeholder="Seguridad"></input>
+                      </td>
+                    </tr>
+                  </table>
+                  <button class='pay-btn'>Pagar</button>
+      
+                </div>
+      
+              </div>
+            </div>
+      </div>
+</body>
+</html>

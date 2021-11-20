@@ -1,0 +1,145 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sesión</title>
+    <link rel="shortcut icon" href="../images/logopa.png" type="image/x-icon">
+    <link rel="stylesheet" href="../CSS/formulario.css">
+    <link rel="shortcut icon" href="images/we1y4RBg5GDDQAAAABJRU5ErkJggg.png" type="image/x-icon">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <script >
+        document.addEventListener('DOMContentLoaded', () => {
+            let db;
+
+            let request = indexedDB.open('veterinaria', 1);
+            request.onsuccess = function(evt) {
+                db = this.result;
+                console.log("openDB DONE!")
+            }
+            request.onerror = function(evt) {
+                console.error("openDB:", evt.target.errorCode)
+            }
+
+            request.onupgradeneeded = function (evt){
+                let store = evt.currentTarget.result.createObjectStore('usuario', { keyPath: 'id_usuario', autoIncrement: true });
+
+                store.createIndex('correo', 'correo', {unique : true } );
+                store.createIndex('contrasena', 'contrasena', {unique : false } );
+            }
+           
+            function getObjectStore(store_name, mode) {
+                let transaccion = db.transaction('usuario', 'readwrite');
+                return transaccion.objectStore('usuario');
+            }
+
+            const form = document.querySelector('form'),
+                correoUsuario = document.querySelector('#correo'),
+                passUsuario = document.querySelector('#pass');
+
+            
+            console.log('funciona!');
+            const boton = document.getElementById('form_inicio--iniciar2');
+            console.log(boton);
+            boton.addEventListener('click', registrarDatos);
+            function registrarDatos(e){
+                e.preventDefault();
+
+                const usuarioRegistrado = {
+                    correo : correoUsuario.value,
+                    contrasena : passUsuario.value,
+                    tipo : tipoUsuario.value
+                }
+
+                let exito = getObjectStore('usuario', 'readwrite').get(usuarioRegistrado);
+                console.log(exito);
+            }
+
+        })
+
+    </script>
+    <div class = "fondo_formulario">
+
+    <div class="barra">
+        <nav>
+            <div class="navbar">
+                <ul class="options">
+                    <li><a href="../index.html"><input type="button" Value="Inicio" class="Boton--cabecera"></a></li>
+                    <li><a href="../index.html #servicios"><input type="button" Value="Servicios" class="Boton--cabecera"></a></li>
+                    <li><a href="../index.html #galeria"><input type="button" Value="Galeria" class="Boton--cabecera"></a></li>
+                    <li><a href="../index.html #contacto"><input type="button" Value="Contacto" class="Boton--cabecera"></a></li>
+                    <li><a href="login.html" class="login">INICIAR SESIÓN</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    
+        <!--<center>-->
+
+            <form class="form_inicio">
+            
+                <div class="form_inicio--Parte1">
+                    
+                    <h3 class="form_inicio--titulo1">Inicie Sesion</h3>
+
+                    <p class="form_inicio--requisito">
+
+                        <span>*</span> <b>Ingrese su correo:</b>
+
+                    </p>
+
+                    <input type="email" name="correo" class="form_inicio--correo" style="outline: none;" placeholder="Escriba el Correo aqui">
+
+                    <p class="form_inicio--requisito2">
+
+                        <span>*</span> <b>Ingrese su Contraseña:</b>
+
+                    </p>
+
+                    <input type="password" name="contraseña" class="form_inicio--correo" style="outline: none;" placeholder="Escriba Su Contraseña aqui">
+
+                    <p class="form_inicio--requisito2">
+
+                        <span>*</span> <b>Seleccione Tipo de Usuario:</b>
+
+                    </p>
+                    <div class="Contenedor_selector">
+
+                        <input type="radio" name="usuario_tipo" class="form_inicio--selector"> <label for="radio" class="selector">Veterinario</label>
+                    
+                    </div><div class="Contenedor_selector2">
+
+                        <input type="radio" name="usuario_tipo" checked class="form_inicio--selector"> <label for="radio" class="selector">cliente</label>
+                    
+                    </div>
+                   
+
+                    <input type="submit" name="iniciar" class="form_inicio--iniciar">
+
+
+
+                </div><div class="form_inicio--Parte2">
+                    
+                    <h3 class="form_inicio--titulo2">¿No tienes Cuenta?</h3>
+
+                    <p class="form_inicio--requisito3"> No te preocupes! Ingresa tus datos para crear una nueva cuenta en Patita Animal!!</p>
+
+                    <form>
+
+                        <a href="Registro.html"><input type="button" name="Registrate" value="Registrate!!" id="form_inicio--iniciar2" class="form_inicio--iniciar2"></a>
+
+                    </form>
+
+                </div>
+
+            </form>
+
+        <!--</center>-->
+
+    </div>
+
+</body>

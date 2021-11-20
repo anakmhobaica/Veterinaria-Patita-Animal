@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Factura</title>
+    <link rel="stylesheet" href="CSS/factura.css" media="all" />
+    <link rel="shortcut icon" href="images/logopa.png" type="image/x-icon">
+  </head>
+  <body>
+    <header class="clearfix">
+      <div id="logo">
+        <img src="images/logo.png">
+      </div>
+      <div id="company">
+        <h2 class="name">Patita Animal</h2>
+        <div>Av. Principal de El Cafetal C.C. Plaza Las Americas, viejo piso 1, Caracas</div>
+        <div>Teléfono: 02128789632</div>
+        <div><a href="#">info@patitanimal.com</a></div>
+      </div>
+      </div>
+    </header>
+    <main>
+      <div id="details" class="clearfix">
+        <div id="client">
+          <div class="to">Factura a:</div>
+          <h2 class="name">Nombre Cliente</h2>
+          <div class="address">dirección cliente</div>
+          <div class="email"><a href="#">correo cliente</a></div>
+        </div>
+        <div id="invoice">
+          <h1>Factura 3-2-1</h1>
+          <div class="date">Fecha de facturación: 01/12/2021</div>
+          <div class="date">Fecha de vencimiento: 30/12/2021</div>
+        </div>
+      </div>
+      <table border="0" cellspacing="0" cellpadding="0">
+        <thead>
+          <tr>
+            <th class="no">#</th>
+            <th class="desc">DESCRIPCIÓN</th>
+            <th class="unit">PRECIO UNITARIO</th>
+            <th class="qty">CANTIDAD</th>
+            <th class="total">TOTAL</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="no">01</td>
+            <td class="desc"><h3>Consulta</h3>Chequeo y vacunas</td>
+            <td class="unit">$99.99</td>
+            <td class="qty">1</td>
+            <td class="total">$99.99</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="2"></td>
+            <td colspan="2">IVA 12%</td>
+            <td>$11.99</td>
+          </tr>
+          <tr>
+            <td colspan="2"></td>
+            <td colspan="2">SUBTOTAL</td>
+            <td>$99.99</td>
+          </tr>
+          <tr>
+            <td colspan="2"></td>
+            <td colspan="2">TOTAL</td>
+            <td>$111.98</td>
+          </tr>
+        </tfoot>
+      </table>
+      <div id="thanks">¡Muchas Gracias!</div>
+  </body>
+</html>
