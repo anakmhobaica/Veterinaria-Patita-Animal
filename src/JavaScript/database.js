@@ -1,7 +1,7 @@
 export let db;
 
 export const openDB = () => {
-  let crearDB = indexedDB.open('veterinaria', 2);
+  let crearDB = indexedDB.open('veterinaria', 1);
 
   crearDB.onerror = function(event) {
       console.log('error', event)
