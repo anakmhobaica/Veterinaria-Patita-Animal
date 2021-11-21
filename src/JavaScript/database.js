@@ -20,9 +20,10 @@ export const openDB = () => {
       usuario.createIndex('contrasena', 'contrasena', {unique : false } );
       usuario.createIndex('nombre', 'nombre', {unique : false } );
       usuario.createIndex('apellido', 'apellido', {unique : false } );
-      usuario.createIndex('direccion', 'direccion', {unique : false } );
+      //usuario.createIndex('direccion', 'direccion', {unique : false } );
       usuario.createIndex('telefono', 'telefono', {unique : false } );
       usuario.createIndex('tipo_usuario', 'tipo_usuario', {unique : false } );
+      usuario.createIndex('primerLogin', 'primerLogin', {unique : false}); 
 
       let cita = database.createObjectStore('cita', {keyPath: 'id_cita', autoIncrement: true } );
    
@@ -51,6 +52,9 @@ export const openDB = () => {
       factura.createIndex('costo_total', 'costo_total', {unique : false } );
 
       console.log('base de datos creada y lista');
+
+      let veterinario = {nombre: 'Pepito', apellido: 'Perez', telefono: '7123718724', correo: 'veterinario.patitanimal@gmail.com', contrasena: 'animalitosCuchis123', tipo: 'cliente', primerLogin: true};
+      getObjectStore('usuario', 'readwrite').add(veterinario);
    }
 }
 

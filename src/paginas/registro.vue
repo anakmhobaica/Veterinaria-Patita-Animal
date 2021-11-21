@@ -1,6 +1,6 @@
 <script setup>
 import { openDB, getObjectStore } from '../JavaScript/database.js';
-import '../CSS/formulario.css';
+//import '../CSS/formulario.css';
 document.addEventListener('DOMContentLoaded', () => {
   openDB();
 
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
           //direccion : direccionUsuario.value,
           correo : correoUsuario.value,
           contrasena : passUsuario.value,
-          tipo : 'usuario',
+          tipo : 'cliente',
       }
 
       const request = getObjectStore('usuario', 'readwrite').add(nuevoUsuario);
@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                     <input type="password" name="confirmar-contrasena" id= "confirmar-contrasena" class="form_registro--nombre" style="outline: none;" placeholder="Confirme su Contraseña">
                     
-                    <h3 class="Titulo_selector">Tipo De usuario</h3>
+                    <!-- <h3 class="Titulo_selector">Tipo De usuario</h3>
 
                     <div class="Contenedor_selector">
 
@@ -100,9 +100,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
                         <input type="radio" name="usuario_tipo" checked class="form_inicio--selector"> <label for="radio" class="selector">cliente</label>
                     
-                    </div>
+                    </div> -->
 
-                    <a href="Registro.html" id="form_registro--Registrar"><input type="button" name="Registrate" value="Registrate!!" class="form_registro--Registrar"></a>
+                    <a href="Registro.html" id="form_registro--Registrar"><input type="button" name="Registrate" value="Registrate" class="form_registro--Registrar"></a>
 
                 </div>
 
@@ -112,3 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     </div>
 </template>
+
+<style scoped src="../CSS/formulario.css">
+
+</style>

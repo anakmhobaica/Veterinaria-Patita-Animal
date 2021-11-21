@@ -7,7 +7,7 @@
         <header class="header" id="inicio">
             <div class="contenedor head">
                 <div class="logo">
-                    <img src="images/logopa.png" alt="" class="img-inicio">
+                    <img src="../images/logopa.png" alt="" class="img-inicio">
                     <!--<button class="button1" onclick="document.location = '#'">PIDE TU CITA</button>--> 
                 </div>
             </div>
@@ -20,7 +20,7 @@
                         <li><a href="#servicios"><input type="button" Value="Servicios" class="Boton--cabecera"></a></li>
                         <li><a href="#galeria"><input type="button" Value="Galeria" class="Boton--cabecera"></a></li>
                         <li><a href="#contacto"><input type="button" Value="Contacto" class="Boton--cabecera"></a></li>
-                        <li><a href="Formularios/login.html" class="login">INICIAR SESIÓN</a></li>
+                        <!-- <li><a href="Formularios/login.html" class="login">INICIAR SESIÓN</a></li> -->
                         <li><router-link to="/inicio-sesion" class="login">INICIAR SESION</router-link></li>
                     </ul>
                 </div>
@@ -29,7 +29,7 @@
         <section class="contenedor" id="mision">
             <h2 class="subtitulo">MISIÓN</h2>
             <div class="contenedor-mision">
-                <img src="images/organico1.png" alt="">
+                <img src="../images/organico1.png" alt="">
                 <div class="info-mision">
                     <p>Nuestro principal objetivo es la salud de nuestros pacientes y el éxito de nuestros tratamientos. 
                         Nos adaptamos a las necesidades de cada paciente. 
@@ -46,7 +46,7 @@
                         desde la ética humana profesional comprometida y responsable de calidad con el fin de brindar la mejor alternativa en atención 
                         especializada para peludos pacientes.</p>
                 </div>
-                <img src="images/organico2.png" alt="">
+                <img src="../images/organico2.png" alt="">
             </div>
         </section>
         <section class="contenedor" id="servicios">
@@ -100,18 +100,18 @@
             <div class="contenedor-fluido">
                 <h2 class="subtitulo">GALERÍA</h2>
                 <div class="contendor-galeria">
-                    <img src="images/veterinario-gatos.jpg" alt="" class="img-galeria">
-                    <img src="images/urgencias-veterinarias.jpg" alt="" class="img-galeria">
-                    <img src="images/rehabilitacion-mascota.jpg" alt="" class="img-galeria">
-                    <img src="images/clinica-veterinaria-1.jpg" alt="" class="img-galeria">
-                    <img src="images/DIAGNOSTICO-POR-IMAGEN.jpg" alt="" class="img-galeria">
-                    <img src="images/seguros-animales-alcala-de-henares.jpg" alt="" class="img-galeria">
-                    <img src="images/TRAUMATOLOGIA-VETERINARIA-ALCALA-DE-HENARES.jpg" alt="" class="img-galeria">
-                    <img src="images/VACUNACIONES-PERRO-ALCALA-DE-HENARES.jpg" alt="" class="img-galeria">
-                    <img src="images/PELUQUERIA-CANINA-ALCALA-DE-HENARES.jpg" alt="" class="img-galeria">
-                    <img src="images/ECOGRAFIA-PERRO-ALCALA-DE-HENARES.jpg" alt="" class="img-galeria">
-                    <img src="images/ANALISIS-VETERINARIO-ALCALA-DE-HENARES.jpg" alt="" class="img-galeria">
-                    <img src="images/CIRUGIA-VETERINARIA-ALCALA-DE-HENARES.jpg" alt="" class="img-galeria">
+                    <img src="../images/veterinario-gatos.jpg" alt="" class="img-galeria">
+                    <img src="../images/urgencias-veterinarias.jpg" alt="" class="img-galeria">
+                    <img src="../images/rehabilitacion-mascota.jpg" alt="" class="img-galeria">
+                    <img src="../images/clinica-veterinaria-1.jpg" alt="" class="img-galeria">
+                    <img src="../images/DIAGNOSTICO-POR-IMAGEN.jpg" alt="" class="img-galeria">
+                    <img src="../images/seguros-animales-alcala-de-henares.jpg" alt="" class="img-galeria">
+                    <img src="../images/TRAUMATOLOGIA-VETERINARIA-ALCALA-DE-HENARES.jpg" alt="" class="img-galeria">
+                    <img src="../images/VACUNACIONES-PERRO-ALCALA-DE-HENARES.jpg" alt="" class="img-galeria">
+                    <img src="../images/PELUQUERIA-CANINA-ALCALA-DE-HENARES.jpg" alt="" class="img-galeria">
+                    <img src="../images/ECOGRAFIA-PERRO-ALCALA-DE-HENARES.jpg" alt="" class="img-galeria">
+                    <img src="../images/ANALISIS-VETERINARIO-ALCALA-DE-HENARES.jpg" alt="" class="img-galeria">
+                    <img src="../images/CIRUGIA-VETERINARIA-ALCALA-DE-HENARES.jpg" alt="" class="img-galeria">
                 </div>
             </div>
         </section>
@@ -209,3 +209,7 @@
         </footer>
     </div>
 </template>
+
+<style scoped src="../CSS/estilos.css">
+
+</style>

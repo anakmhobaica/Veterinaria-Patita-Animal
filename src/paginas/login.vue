@@ -1,6 +1,6 @@
 <script setup>
   import { openDB, getObjectStore } from '../JavaScript/database.js';
-  import '../CSS/formulario.css';
+  //import '../CSS/formulario.css';
   document.addEventListener('DOMContentLoaded', () => {
     openDB();
 
@@ -104,7 +104,7 @@
                     <form>
 
                         <router-link to="/registro">
-                          <input type="button" name="Registrate" value="Registrate!!" id="form_inicio--iniciar2" class="form_inicio--iniciar2">
+                          <input type="button" name="Registrate" value="Registrate" id="form_inicio--iniciar2" class="form_inicio--iniciar2">
                         </router-link>
 
                     </form>
@@ -118,3 +118,6 @@
     </div>
   </div>
 </template>
+<style scoped src="../CSS/formulario.css">
+
+</style>

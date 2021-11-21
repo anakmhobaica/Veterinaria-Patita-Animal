@@ -1,5 +1,5 @@
 <script setup>
-  import "../CSS/styles.css";
+  //import "../CSS/styles.css";
   import "../JavaScript/cita.js";
 </script>
 
@@ -67,3 +67,4 @@
 
     </div>
 </template>
+<style scoped src="../CSS/styles.css"></style>
