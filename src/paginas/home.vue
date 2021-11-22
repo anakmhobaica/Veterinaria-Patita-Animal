@@ -1,5 +1,7 @@
 <script setup>
-    import "../JavaScript/app.js";
+    // import "../JavaScript/app.js";
+    import { openDB } from '../JavaScript/database.js';
+    openDB();
 </script>
 
 <template>

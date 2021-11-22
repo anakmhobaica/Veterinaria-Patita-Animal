@@ -1,34 +1,7 @@
 <script setup>
   import { openDB, getObjectStore } from '../JavaScript/database.js';
   //import '../CSS/formulario.css';
-  document.addEventListener('DOMContentLoaded', () => {
-    openDB();
-
-    const form = document.querySelector('form'),
-        correoUsuario = document.querySelector('#correo'),
-        passUsuario = document.querySelector('#pass');
-
-    
-    const boton = document.getElementById('form_inicio--iniciar');
-    boton.addEventListener('click', registrarDatos);
-    function registrarDatos(e){
-        e.preventDefault();
-
-        const usuarioRegistrado = {
-            correo : correoUsuario.value,
-            contrasena : passUsuario.value,
-        }
-
-        let objectStore = getObjectStore('usuario', 'readwrite');
-        let request = objectStore.index('correo').get(usuarioRegistrado.correo);
-        request.onsuccess = (event) => {
-          console.log(request.result);  
-        }
-        request.onerror = (event) => {
-          console.log('Ocurrio un error');
-        } 
-    }
-  });
+  
 
 </script>
 
@@ -74,7 +47,7 @@
                     </p>
 
                     <input type="password" id="pass" name="contraseña" class="form_inicio--correo" style="outline: none;" placeholder="Escriba Su Contraseña aqui">
-
+<!-- 
                     <p class="form_inicio--requisito2">
 
                         <span>*</span> <b>Seleccione Tipo de Usuario:</b>
@@ -88,7 +61,7 @@
 
                         <input type="radio" name="usuario_tipo" checked class="form_inicio--selector"> <label for="radio" class="selector">cliente</label>
                     
-                    </div>
+                    </div> -->
                    
 
                     <input type="button" name="iniciar" id="form_inicio--iniciar" class="form_inicio--iniciar">
@@ -118,6 +91,61 @@
     </div>
   </div>
 </template>
+
+<script>
+    import { openDB, getObjectStore } from '../JavaScript/database.js';
+    export default {
+        mounted() {
+            const router = this.$router;
+            document.addEventListener('DOMContentLoaded', () => {
+                openDB();
+
+                const form = document.querySelector('form'),
+                    correoUsuario = document.querySelector('#correo'),
+                    passUsuario = document.querySelector('#pass');
+
+                
+                const boton = document.getElementById('form_inicio--iniciar');
+                boton.addEventListener('click', registrarDatos);
+                function registrarDatos(e){
+                    e.preventDefault();
+
+                    const usuarioRegistrado = {
+                        correo : correoUsuario.value,
+                        contrasena : passUsuario.value,
+                    }
+
+                    let objectStore = getObjectStore('usuario', 'readwrite');
+                    let request = objectStore.index('correo').get(usuarioRegistrado.correo);
+                    request.onsuccess = (event) => {
+                        console.log(request.result); 
+                        if (request.result === undefined){
+                            console.log('El usuario no está registrado.');
+                        }
+                        else{
+                            if (request.result.tipo_usuario === 'veterinario'){
+                                router.push({ path: '/veterinario' });
+                                if (request.result.primerLogin){
+                                    const data = request.result;
+                                    data.primerLogin = false;
+                                    data.contrasena = contrasena;
+                                    const updateVet = objectStore.put(data);   
+                                }
+                            }else{
+                                router.push({ path: '/usuario' });
+                            }
+                        }
+                    }
+                    request.onerror = (event) => {
+                    console.log('Ocurrio un error');
+                    } 
+                }
+
+            });
+        }
+    };
+</script>
+
 <style scoped src="../CSS/formulario.css">
 
 </style>
