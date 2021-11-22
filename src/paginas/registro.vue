@@ -1,44 +1,5 @@
 <script setup>
 import { openDB, getObjectStore } from '../JavaScript/database.js';
-//import '../CSS/formulario.css';
-document.addEventListener('DOMContentLoaded', () => {
-  openDB();
-
-  const form = document.querySelector('form'),
-      nombreUsuario = document.querySelector('#nombre'),
-      apellidoUsuario = document.querySelector('#apellido'),
-      telefonoUsuario = document.querySelector('#telefono'),
-      //direccionUsuario = document.querySelector('#direccion'),
-      correoUsuario = document.querySelector('#correo'),
-      passUsuario = document.querySelector('#pass'),
-      tipoUsuario = document.querySelector('#tipo-usuario');
-
-  const boton = document.getElementById('form_registro--Registrar');
-  console.log(boton);
-  boton.addEventListener('click', registrarDatos);
-  function registrarDatos(e){
-      e.preventDefault();
-
-      const nuevoUsuario = {
-          nombre : nombreUsuario.value,
-          apellido : apellidoUsuario.value,
-          telefono : telefonoUsuario.value,
-          //direccion : direccionUsuario.value,
-          correo : correoUsuario.value,
-          contrasena : passUsuario.value,
-          tipo : 'cliente',
-      }
-
-      const request = getObjectStore('usuario', 'readwrite').add(nuevoUsuario);
-      request.onsuccess = (event) => {
-        console.log('Usuario registrado con Exito');
-      }
-      request.onerror = (event) => {
-        console.log('Ha ocurrido un Error');
-      }
-  }
-
-})
 </script>
 
 <template>
@@ -102,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     
                     </div> -->
 
-                    <a href="Registro.html" id="form_registro--Registrar"><input type="button" name="Registrate" value="Registrate" class="form_registro--Registrar"></a>
+                    <a id="form_registro--Registrar"><input type="button" name="Registrate" value="Registrate" class="form_registro--Registrar"></a>
 
                 </div>
 
@@ -112,6 +73,50 @@ document.addEventListener('DOMContentLoaded', () => {
 
     </div>
 </template>
+
+<script>
+    import { openDB, getObjectStore } from '../JavaScript/database.js';
+    export default {
+        mounted() {
+            const router = this.$router;
+            openDB();
+
+            const form = document.querySelector('form'),
+                nombreUsuario = document.querySelector('#nombre'),
+                apellidoUsuario = document.querySelector('#apellido'),
+                telefonoUsuario = document.querySelector('#telefono'),
+                //direccionUsuario = document.querySelector('#direccion'),
+                correoUsuario = document.querySelector('#correo'),
+                passUsuario = document.querySelector('#pass');
+
+            const boton = document.getElementById('form_registro--Registrar');
+            console.log(boton);
+            boton.addEventListener('click', registrarDatos);
+            function registrarDatos(e){
+                e.preventDefault();
+
+                const nuevoUsuario = {
+                    nombre : nombreUsuario.value,
+                    apellido : apellidoUsuario.value,
+                    telefono : telefonoUsuario.value,
+                    //direccion : direccionUsuario.value,
+                    correo : correoUsuario.value,
+                    contrasena : passUsuario.value,
+                    tipo_usuario : 'cliente',
+                    primerLogin : false,
+                }
+
+                const request = getObjectStore('usuario', 'readwrite').add(nuevoUsuario);
+                request.onsuccess = (event) => {
+                    router.push({ path: '/agendar-cita '});
+                }
+                request.onerror = (event) => {
+                    console.log('Ha ocurrido un Error');
+                }
+            }
+        }
+    };
+</script>
 
 <style scoped src="../CSS/formulario.css">
 

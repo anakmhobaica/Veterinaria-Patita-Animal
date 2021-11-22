@@ -1,10 +1,3 @@
-<script setup>
-  import { openDB, getObjectStore } from '../JavaScript/database.js';
-  //import '../CSS/formulario.css';
-  
-
-</script>
-
 <template>
   <div>
     <div class = "fondo_formulario">
@@ -63,6 +56,8 @@
                     
                     </div> -->
                    
+                    <!-- Aqui esta el elemento vacio -->
+                    <div class="error" id="error-login"></div>
 
                     <input type="button" name="iniciar" id="form_inicio--iniciar" class="form_inicio--iniciar">
 
@@ -97,51 +92,65 @@
     export default {
         mounted() {
             const router = this.$router;
-            document.addEventListener('DOMContentLoaded', () => {
-                openDB();
+            // const usuarioLoggeado = sessionStorage.get('usuario');
+            // if (usuarioLoggeado && usuarioLoggeado.tipo_usuario != 'veterinario') {
+            //     router.replace({ path: '/' });
+            // }
+            openDB();
 
-                const form = document.querySelector('form'),
-                    correoUsuario = document.querySelector('#correo'),
-                    passUsuario = document.querySelector('#pass');
+            const form = document.querySelector('form'),
+                correoUsuario = document.querySelector('#correo'),
+                passUsuario = document.querySelector('#pass'),
+                // Este es el elemento vacio para el mensaje de error
+                error = document.querySelector('#error-login');
 
-                
-                const boton = document.getElementById('form_inicio--iniciar');
-                boton.addEventListener('click', registrarDatos);
-                function registrarDatos(e){
-                    e.preventDefault();
+            
+            const boton = document.getElementById('form_inicio--iniciar');
+            boton.addEventListener('click', registrarDatos);
+            function registrarDatos(e){
+                e.preventDefault();
 
-                    const usuarioRegistrado = {
-                        correo : correoUsuario.value,
-                        contrasena : passUsuario.value,
-                    }
+                const usuarioRegistrado = {
+                    correo : correoUsuario.value,
+                    contrasena : passUsuario.value,
+                }
 
-                    let objectStore = getObjectStore('usuario', 'readwrite');
-                    let request = objectStore.index('correo').get(usuarioRegistrado.correo);
-                    request.onsuccess = (event) => {
-                        console.log(request.result); 
-                        if (request.result === undefined){
-                            console.log('El usuario no está registrado.');
-                        }
-                        else{
-                            if (request.result.tipo_usuario === 'veterinario'){
+                let objectStore = getObjectStore('usuario', 'readwrite');
+                let request = objectStore.index('correo').get(usuarioRegistrado.correo);
+                request.onsuccess = (event) => {
+                    if (request.result === undefined){
+                        console.log('El usuario no está registrado.');
+                    } else {
+                        if (request.result.tipo_usuario === 'veterinario'){
+                            if (request.result.primerLogin){
+                                const data = request.result;
+                                data.primerLogin = false;
+                                data.contrasena = usuarioRegistrado.contrasena;
+                                // Esto actualiza la DB
+                                const updateVet = objectStore.put(data);
                                 router.push({ path: '/veterinario' });
-                                if (request.result.primerLogin){
-                                    const data = request.result;
-                                    data.primerLogin = false;
-                                    data.contrasena = contrasena;
-                                    const updateVet = objectStore.put(data);   
-                                }
-                            }else{
-                                router.push({ path: '/usuario' });
+                            } else if (request.result.contrasena === usuarioRegistrado.contrasena) {
+                                router.push({ path: '/veterinario' });
+                            } else {
+                                // Esto es para el mensaje de Error
+                                error.innerHTML = 'Credenciales invalidas';
+                            }
+                        } else {
+                            if (request.result.contrasena === usuarioRegistrado.contrasena) {
+                                // Para mantener los datos en memoria
+                                sessionStorage.setItem('usuario', request.result);
+                                router.push({ path: '/agendar-cita' });
+                            } else {
+                                console.log('Credenciales invalidas');
                             }
                         }
                     }
-                    request.onerror = (event) => {
-                    console.log('Ocurrio un error');
-                    } 
                 }
-
-            });
+                request.onerror = (event) => {
+                console.log('Ocurrio un error');
+                } 
+            }
+            console.log('Cargado!');
         }
     };
 </script>
