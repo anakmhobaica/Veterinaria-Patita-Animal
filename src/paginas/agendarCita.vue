@@ -4,7 +4,7 @@
 </script>
 
 <template>
-<div class="container mt-5 p-5">
+<!-- <div class="container mt-5 p-5">
         <div class="row">
             <div class="col-md-6 agregar-cita">
                     <h2 class="text-center my-4">Agenda de Citas</h2>
@@ -65,6 +65,69 @@
         </div>
 
 
+    </div> -->
+
+    <a class="btn_pagar"><input type="button" value="Volver"></a>
+    <a class="btn_pagar2"><input type="button" value="Pagar"></a>
+
+    <div class="container mt-5 p-5">
+        <div class="row">
+            <div class="col-md-6 agregar-cita">
+                    <h2 class="text-center my-4">Agenda de Citas</h2>
+                    <form>
+                            <div class="form-group row">
+                                <label class="col-sm-4 col-lg-4 col-form-label">Nombre Mascota:</label>
+                                <div class="col-sm-8 col-lg-8">
+                                    <input type="text" id="mascota" class="form-control" placeholder="Nombre Mascota" required>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-4 col-lg-4 col-form-label">Nombre Dueño:</label>
+                                <div class="col-sm-8 col-lg-8">
+                                    <input type="text" id="cliente"  class="form-control"  placeholder="Nombre Dueño de la Mascota" required>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                    <label class="col-sm-4 col-lg-4 col-form-label">Teléfono:</label>
+                                    <div class="col-sm-8 col-lg-8">
+                                        <input type="tel" id="telefono" class="form-control"  placeholder="Número de Teléfono" required>
+                                    </div>
+                                </div>
+                            <div class="form-group row">
+                                <label class="col-sm-4 col-lg-4 col-form-label">Fecha:</label>
+                                <div class="col-sm-8 col-lg-8">
+                                    <input type="date" id="fecha" class="form-control" required>
+                                </div>
+                            </div>
+
+                             <div class="form-group row">
+                                <label class="col-sm-4 col-lg-4 col-form-label">Hora:</label>
+                                <div class="col-sm-8 col-lg-8">
+                                    <input type="time" id="hora" class="form-control" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label class="col-sm-4 col-lg-4 col-form-label">Sintomas:</label>
+                                <div class="col-sm-8 col-lg-8">
+                                    <textarea id="sintomas" class="form-control" required></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group row justify-content-end">
+                                <div class="col-sm-3">
+                                    <button type="submit" class="btn btn-success w-100">Agregar</button>
+                                </div>
+                            </div>
+                        </form>
+            </div>
+
+            <div class="col-md-6">
+                    <h2 id="administra" class="text-center my-4"></h2>
+                    <ul id="citas" class="list-group">
+                      
+                    </ul>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -103,6 +166,15 @@ export default {
                     fecha : fecha.value,
                     hora : hora.value,
                     sintomas : sintomas.value
+                }
+
+                const request = getObjectStore('cita', 'readwrite').add(nuevaCita);
+                request.onsuccess = (event) => {
+                    //router.push({ path: '/agendar-cita '});
+                    console.log('Cita agendada exitosamente.')
+                }
+                request.onerror = (event) => {
+                    console.log('Ha ocurrido un Error');
                 }
 
                 //console.log(nuevaCita);

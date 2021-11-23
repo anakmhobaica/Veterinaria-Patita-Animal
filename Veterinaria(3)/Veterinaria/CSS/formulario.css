@@ -226,88 +226,6 @@ div.letras {
     box-shadow: rgba(0, 0, 0, 0.508);
 }
 
-.contendor-galeria{
-    display: flex;
-    justify-content: space-between;
-    /*flex-wrap: wrap;*/
-    margin: auto;
-    position: relative;
-    width: 100vw;
-    height: 300px;
-    overflow: hidden;
-}
-
-.slider{
-
-    display: block;
-    position: absolute;
-    opacity: 0;
-    padding-left: 0px;
-    margin: auto;
-    width: 100%;
-    transition: opacity .5s;
-
-}
-
-.contendor-galeria .slider:first-child{
-
-    opacity: 1;
-    transition: opacity .5s;
-
-}
-
-.contendor-galeria .slider:target{
-
-    opacity: 1;
-    transition: opacity .5s;
-
-}
-
-.img-galeria{
-    width: 310px;
-    display: inline-block;
-    /*justify-content: space-center;*/
-    box-shadow: rgba(0, 0, 0, 0.508);
-    position: relative;
-    margin: auto;
-    
-}
-
-.img-centrar{
-
-    display: block;
-    margin: auto;
-
-}
-
-.nav-slider{
-
-    display: block;
-    margin: auto;
-    width: 135px;
-    padding-top: 30px;
-}
-
-.nav-slider a input{
-
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    transition: all .5s;
-    background-color: #085271;
-    color: #085271;
-    border: 1px solid #085271;
-
-}
-
-.nav-slider a input:hover{
-
-    width: 45px;
-    height: 45px;
-    transition: all .5s;
-
-}
-
 /*footer*/
 footer{
     background-color: #085271;
@@ -543,7 +461,7 @@ span{
   
 .title{
     font-size: 28px;   
-    color: #085271;
+    color: #02a352;
 }
   
 .subtitle{
@@ -1052,5 +970,51 @@ a:hover{
 .form_registro--iniciar:hover{
 
     box-shadow: 0 8px 10px 5px #053549;
+
+}
+
+/*Botones de selecion de cliente*/
+
+.form_inicio--selector{
+
+    width: 20px;
+    height: 20px;
+    display: inline;
+
+}
+
+.selector{
+
+    display: inline;
+    float: right;
+    text-align: left;
+    padding-top: 3px;
+
+
+}
+
+.Contenedor_selector{
+
+    display: inline-block;
+    width: calc(35% - 20px);
+    margin-top: 20px;
+    margin-left: 20px;
+
+}
+
+.Contenedor_selector2{
+
+    display: inline-block;
+    width: calc(27% - 20px);
+    margin-top: 20px;
+    margin-left: 20px;
+
+}
+
+.Titulo_selector{
+
+    margin-left: 20px;
+    font-size: 13px;
+    margin-top: 10px;
 
 }

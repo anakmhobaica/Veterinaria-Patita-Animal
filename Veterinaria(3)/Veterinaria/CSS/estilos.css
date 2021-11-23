@@ -16,12 +16,11 @@
 }
 
 .contenedor-fluido{
-    width: 100%;
+    width: 90%;
     overflow: hidden;
     margin: auto;
-    padding: 45px 24px;
+    padding: 45px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    overflow-x: auto;
 }
 
 /*.navbar{
@@ -210,20 +209,6 @@ div.letras {
     color: #e01304; 
     display: flex;
     justify-content: space-evenly;
-}
-
-.contendor-galeria{
-    display: flex;
-    justify-content: space-between;
-    /*flex-wrap: wrap;*/
-    margin: auto;
-}
-
-.img-galeria{
-    width: 350px;
-    display: flex;
-    /*justify-content: space-center;*/
-    box-shadow: rgba(0, 0, 0, 0.508);
 }
 
 .contendor-galeria{
@@ -543,7 +528,7 @@ span{
   
 .title{
     font-size: 28px;   
-    color: #085271;
+    color: #02a352;
 }
   
 .subtitle{
@@ -1052,5 +1037,51 @@ a:hover{
 .form_registro--iniciar:hover{
 
     box-shadow: 0 8px 10px 5px #053549;
+
+}
+
+/*Botones de selecion de cliente*/
+
+.form_inicio--selector{
+
+    width: 20px;
+    height: 20px;
+    display: inline;
+
+}
+
+.selector{
+
+    display: inline;
+    float: right;
+    text-align: left;
+    padding-top: 3px;
+
+
+}
+
+.Contenedor_selector{
+
+    display: inline-block;
+    width: calc(35% - 20px);
+    margin-top: 20px;
+    margin-left: 20px;
+
+}
+
+.Contenedor_selector2{
+
+    display: inline-block;
+    width: calc(27% - 20px);
+    margin-top: 20px;
+    margin-left: 20px;
+
+}
+
+.Titulo_selector{
+
+    margin-left: 20px;
+    font-size: 13px;
+    margin-top: 10px;
 
 }
