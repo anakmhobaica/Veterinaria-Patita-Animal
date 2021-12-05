@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sesión</title>
+    <link rel="stylesheet" href="css/formulario.css">
+    <link rel="shortcut icon" href="images/logopa.png" type="image/x-icon"> 
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <script src="javascript/login.js" ></script> 
+    <script>
+
+    </script>
+    <div class = "fondo_formulario">
+
+    <div class="barra">
+        <nav>
+            <div class="navbar">
+                <ul class="options">
+                    <li><a href="../index.html"><input type="button" Value="Inicio" class="Boton--cabecera"></a></li>
+                    <li><a href="../index.html #servicios"><input type="button" Value="Servicios" class="Boton--cabecera"></a></li>
+                    <li><a href="../index.html #galeria"><input type="button" Value="Galeria" class="Boton--cabecera"></a></li>
+                    <li><a href="../index.html #contacto"><input type="button" Value="Contacto" class="Boton--cabecera"></a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    
+        <!--<center>-->
+
+            <form class="form_inicio">
+            
+                <div class="form_inicio--Parte1">
+                    
+                    <h3 class="form_inicio--titulo1">Inicie Sesión</h3>
+
+                    <p class="form_inicio--requisito">
+
+                        <span>*</span> <b>Ingrese su correo:</b>
+
+                    </p>
+
+                    <input type="email" id="correo" name="correo" class="form_inicio--correo" style="outline: none;" placeholder="Ingrese su correo">
+
+                    <p class="form_inicio--requisito2">
+
+                        <span>*</span> <b>Ingrese su contraseña:</b>
+
+                    </p>
+
+                    <input type="password" id="pass" name="contraseña" class="form_inicio--correo" style="outline: none;" placeholder="Ingrese su contraseña">
+                   
+                    <!-- Aqui esta el elemento vacio -->
+                    <div class="error" id="error-login"></div>
+
+                    <input type="button" name="iniciar" value="Iniciar Sesion" id="form_inicio--iniciar" class="form_inicio--iniciar">
+
+
+
+                </div><div class="form_inicio--Parte2">
+                    
+                    <h3 class="form_inicio--titulo2">¿No tienes cuenta?</h3>
+
+                    <p class="form_inicio--requisito3"> ¡No te preocupes! Ingresa tus datos para crear una nueva cuenta en Patita Animal.</p>
+
+                    <form>
+
+                        <a href="registro.html"><input type="button" name="Registrate" value="Registrate" id="form_inicio--iniciar2" class="form_inicio--iniciar2"></a>
+
+                    </form>
+
+                </div>
+
+            </form>
+
+        <!--</center>-->
+
+    </div>
+
+</body>
+</html>

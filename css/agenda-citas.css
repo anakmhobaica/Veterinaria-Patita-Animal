@@ -1,0 +1,316 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+  border-bottom: 30px solid #085271; 
+}
+
+.barra li {
+  position: bottom; 
+  float: left;
+  text-align: center; 
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 15px;
+  margin-bottom: 0px;
+  font-size: 16px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.login {
+  color: black;
+  border: 1px black;
+  
+}
+
+.login:hover{
+  color: white;
+  transition: all .3s;
+}
+
+.options {
+  list-style-type: none;
+  margin: 0;
+  padding: 5px;
+  overflow: hidden;
+  background-color: #085271;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 58px;
+}
+
+.Boton--cabecera{
+  background-color: #085271;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  transition: all .4s; 
+  cursor: pointer;
+}
+
+.Boton--cabecera:hover{
+  background-color: #02a352;
+  outline: 20px solid #02a352;
+  transition: all .4s;
+}
+
+#estado-sesion a {
+  margin-right: 17px;
+  text-decoration: none;
+}
+
+h2 {
+  margin-bottom:0px;
+  margin-top:25px;
+  text-align:center;
+  font-weight:200;
+  font-size:30px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.titulo-cita{
+    color: #fff;
+}
+.titulo-datos{
+    color: black;
+}
+.container {
+  height:100%;
+  -webkit-box-pack:center;
+  -webkit-justify-content:center;
+  -ms-flex-pack:center;
+  justify-content:center;
+  -webkit-box-align:center;
+  -webkit-align-items:center;
+  -ms-flex-align:center;
+  align-items:center;
+  display:flex;
+  background-image: url(https://www.radioaspen.com.py/wp-content/uploads/2017/10/mascotas.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position:center;
+  height: 100vh;
+}
+
+.date-list {
+  margin:0;
+  padding:0;
+}
+ul .days-week {
+  list-style:none;
+  padding-left:10px;
+  cursor:pointer;
+}
+ul .days-week:hover {
+  background:rgba(255,255,255,0.1);
+}
+
+.window {
+  height:540px;
+  width:800px;
+  background:#004a69;
+  display:-webkit-box;
+  display:-webkit-flex;
+  display:-ms-flexbox;
+  display:flex;
+  box-shadow: 0px 15px 50px 10px rgba(0, 0, 0, 0.2);
+  border-radius:30px;
+  z-index:10;
+}
+.order-info {
+  height:100%;
+  width:50%;
+  padding-left:10px;
+  padding-right:10px;
+  box-sizing:border-box;
+  display:-webkit-box;
+  display:-webkit-flex;
+  display:-ms-flexbox;
+  display:flex;
+  -webkit-box-pack:center;
+  -webkit-justify-content:center;
+      -ms-flex-pack:center;
+          justify-content:center;
+  position:relative;
+}
+
+.order-info-content {
+  table-layout:fixed;
+  width: 100%;
+}
+
+.full-width {
+  width:100%;
+}
+
+.credit-info {
+  background:#fff;
+  height:100%;
+  width:50%;
+  -webkit-box-pack:center;
+  -webkit-justify-content:center;
+      -ms-flex-pack:center;
+          justify-content:center;
+  font-size:14px;
+  font-size:.9rem;
+  display:-webkit-box;
+  display:-webkit-flex;
+  display:-ms-flexbox;
+  display:flex;
+  box-sizing:border-box;
+  padding-left:25px;
+  padding-right:25px;
+  border-top-right-radius:30px;
+  border-bottom-right-radius:30px;
+  position:relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.credit-info-content {
+  margin-top:2px;
+  -webkit-flex-flow:column;
+      -ms-flex-flow:column;
+          flex-flow:column;
+  display:-webkit-box;
+  display:-webkit-flex;
+  display:-ms-flexbox;
+  display:flex;
+  width:100%;
+}
+@media (max-width: 600px) {
+  .window {
+    width: 100%;
+    height: 100%;
+    display:block;
+    border-radius:0px;
+  }
+  .order-info {
+    width:100%;
+    height:auto;
+    padding-bottom:100px;
+    border-radius:0px;
+  }
+  .credit-info {
+    width:100%;
+    height:auto;
+    padding-bottom:100px;
+    border-radius:0px;
+  }
+}
+
+.btn_pagar{
+    position: absolute;
+    width: 150px;
+    left: 50px;
+    top: 10px;
+}
+
+.btn_pagar input {
+    border: none;
+    background-color: red;
+    border-radius: 10px;
+    color: #fff;
+    width: 150px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.btn_pagar input:hover{
+    background-color: rgb(143, 7, 7);
+}
+
+.date-list{
+  margin: 12px;
+  margin-top: 25px;
+}
+
+.days-week{
+  background-color: #fff;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 25px;
+  border-radius: 40px;
+  display: flex;
+  flex-direction: row;
+}
+
+.pet-name{
+  display: flex;
+  align-items: center;
+  margin-left: 110px;
+}
+
+.pet-info{
+  margin-top: 30px;
+  font-size: 16px;
+}
+
+.buttons{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  margin-right: 20px;
+}
+
+.button-accept {
+  background-color: rgb(10, 182, 10);
+  cursor: pointer;
+  border-color: rgb(10, 182, 10);
+  border-radius: 9px;
+  padding: 10px;
+  color: #fff;
+  font-size: 15px;
+  width: 100px;
+}
+
+.button-accept:hover{
+  background-color: rgb(8, 134, 8);
+}
+
+.button-accept:disabled {
+  background-color: gray;
+  border-color: gray;
+}
+
+.button-refuse {
+  background-color: red;
+  cursor: pointer;
+  border-color: red;
+  border-radius: 9px;
+  padding: 10px;
+  color: #fff;
+  font-size: 15px;
+  width: 100px;
+}
+
+.button-refuse:hover{
+  background-color: rgb(143, 7, 7);
+}
+
+.button-refuse:disabled {
+  background-color: gray;
+  border-color: gray;
+}
+
+.rechazado {
+  background-color: red;
+}
+
+.aceptado {
+  background-color: green;
+}
+
+.selected {
+  background-color: #1A5C78;
+}

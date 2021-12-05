@@ -1,0 +1,221 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+}
+
+body{
+    border-bottom: 30px solid #085271;
+}
+
+
+.barra li {
+    position: bottom;
+    float: left;
+    text-align: center; 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 15px;
+    margin-bottom: 0px;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.login {
+    color: black;
+    border: 1px black;
+    text-decoration: none;
+}
+
+.login:hover{
+    color: white;
+    transition: all .3s;
+}
+
+#estado-sesion a {
+    margin-right: 17px;
+    text-decoration: none;
+}
+
+.options {
+    list-style-type: none;
+    margin: 0;
+    padding: 5px;
+    overflow: hidden;
+    background-color: #085271;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 58px;
+}
+
+.Boton--cabecera{
+
+    background-color: #085271;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    transition: all .4s;
+    cursor: pointer;
+}
+
+.Boton--cabecera:hover{
+    background-color: #02a352;
+    outline: 20px solid #02a352;
+    transition: all .4s;
+}
+
+
+.container {
+    height:100%;
+    -webkit-box-pack:center;
+    -webkit-justify-content:center;
+    -ms-flex-pack:center;
+    justify-content:center;
+    -webkit-box-align:center;
+    -webkit-align-items:center;
+    -ms-flex-align:center;
+    align-items:center;
+    display:flex;
+    background-image: url(../images/fondo\ gato.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position:center;
+    height: 100vh;
+  }
+
+.direccion {
+    display: flex;
+    justify-content: space-between;
+    z-index: 0;
+}
+.contact_form{  
+    background: #73a6e4;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 470px; 
+    padding: 30px;
+    display: flex; 
+    justify-content: center;
+    height: auto;
+    border-radius: 10px;    
+    padding-left: 10px; 
+    margin: auto;
+    margin-top: 15px;
+    border: 3px solid #004a69;
+    border-radius: 15px;
+    box-shadow: .5rem .5rem .5rem #26586d;
+    background:#085271;
+    color: #fff;
+}
+
+.input-form{
+    outline: none;
+}
+
+.p-form {
+    margin-left: 10px;
+}
+  
+.input-form{
+    background-color: #fbfbfb; 
+    width: 100%; 
+    height: 40px; 
+    border-radius: 5px;  
+    border-style: solid; 
+    border-width: 1px; 
+    border-color: #02a352; 
+    margin-top: 5px;  
+    padding-left: 5px;
+    margin-bottom: 15px;  
+}
+  
+textarea{
+    background-color: #fbfbfb; 
+    width: 100%; 
+    height: 100px; 
+    border-radius: 5px;  
+    border-style: solid; 
+    border-width: 1px; 
+    border-color: #02a352; 
+    margin-top: 5px;  
+    padding-left: 5px;
+    margin-bottom: 15px; 
+    padding-top: 10px; 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+}
+
+textarea:focus{
+
+    outline: none;
+
+}
+  
+label{
+    display: block; 
+    float: center;  
+}
+  
+.boton-form {
+    width: 150px;
+    height: 35px; 
+    padding-left: 5px;
+    padding-right: 5px;     
+    text-transform: uppercase;
+    background-color: #009926; 
+    border-color: #009926; 
+    border-style: solid; 
+    border-radius: 10px; 
+    width: 420px;   
+    cursor: pointer;
+}
+
+.boton-form:hover{
+
+    box-shadow: .3rem .3rem .3rem #2f5d70;
+    transition: all .5s;
+
+}
+
+  
+form p {
+    margin: 0px;
+    color: #fff;
+}
+  
+button p{
+    color: #fff; 
+}
+  
+span{
+    color: #ff0000; 
+}
+  
+.aviso{
+    font-size: 10px;  
+    color: #ffffff;  
+}
+
+.btn_pagar{
+
+    position: absolute;
+    width: 150px;
+    left: 50px;
+    top: 10px;
+  }
+  
+  .btn_pagar input {
+    border: none;
+    background-color: red;
+    border-radius: 10px;
+    color: #fff;
+    width: 150px;
+    height: 30px;
+    cursor: pointer;
+  }
+  
+  .btn_pagar input:hover{
+    background-color: rgb(143, 7, 7);
+  }

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mascota</title>
+    <link rel="stylesheet" href="css/mascota.css">
+    <link rel="shortcut icon" href="images/logopa.png" type="image/x-icon"> 
+</head>
+<body>
+    <div class="barra">
+        <nav>
+            <div class="navbar">
+                <ul class="options">
+                    <li><a href="index.html"><input type="button" Value="Inicio" class="Boton--cabecera"></a></li>
+                    <li><a href="agendar-cliente.html"><input type="button" Value="Agendar una cita" class="Boton--cabecera"></a></li>
+                    <li><a href="lista-mascotas.html"><input type="button" Value="Tus mascotas" class="Boton--cabecera"></a></li>
+                    <li id="estado-sesion"></li>
+
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div>
+        <div class="container">
+            <a class="btn_pagar" id="btn_pagar"><input type="button" value="Volver"></a> 
+            <div class="direccion">
+                <div class="contact_form">
+                    <div class="formulario">      
+                            <form action="#" method="post" id="form">       
+                                <p class="p-form">
+                                    <label for="nombre_mascota" class="colocar_nombre_mascota">Nombre del paciente
+                                        <span class="obligatorio">*</span>
+                                    </label>
+                                        <input type="text" name="introducir_nombre" id="mascota" required="obligatorio" placeholder="Escribe el nombre de la mascota" class="input-form">
+                                </p>
+                                <p class="p-form">
+                                    <label for="email" class="colocar_email">Nombre del dueño
+                                        <span class="obligatorio">*</span>
+                                    </label>
+                                        <input type="text" name="introducir_email" id="cliente" required="obligatorio" placeholder="Escribe el nombre del dueño" class="input-form">
+                                </p>   
+                                <p class="p-form">
+                                    <label for="asunto" class="colocar_asunto">Edad
+                                        <span class="obligatorio">*</span>
+                                    </label>
+                                        <input type="text" name="introducir_edad" id="edad" required="obligatorio" placeholder="Digite la edad de la mascota" class="input-form">
+                                </p> 
+                                <p class="p-form">
+                                    <label for="asunto" class="colocar_asunto">Peso
+                                        <span class="obligatorio">*</span>
+                                    </label>
+                                        <input type="text" name="introducir_peso" id="peso" required="obligatorio" placeholder="Digite el peso de la mascota" class="input-form">
+                                </p>    
+                                <p class="p-form">
+                                    <label for="mensaje" class="colocar_mensaje">Descripción
+                                        <span class="obligatorio">*</span>
+                                    </label>                     
+                                    <textarea name="introducir_descripcion" class="texto_descripcion" id="descripcion" required="obligatorio" placeholder="Comentario"></textarea> 
+                                </p>                    
+                            <button type="submit" name="enviar_formulario" id="registrar" class="boton-form"><p>Enviar</p></button>
+
+                                <p class="aviso">
+                                    <span class="obligatorio"> * </span>Los campos son obligatorios.
+                                </p>          
+                        </form>
+                    </div>  
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="javascript/mascota.js"></script>
+</body>
+</html>

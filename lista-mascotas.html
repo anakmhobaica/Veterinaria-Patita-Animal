@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tus mascotas</title>
+    <link rel="stylesheet" href="css/lista-mascotas.css">
+    <link rel="shortcut icon" href="images/logopa.png" type="image/x-icon"> 
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="barra"> 
+        <nav>
+            <div class="navbar">
+                <ul class="options">
+                    <li><a href="index.html"><input type="button" Value="Inicio" class="Boton--cabecera"></a></li>
+                    <li><a href="agendar-cliente.html"><input type="button" Value="Agendar una cita" class="Boton--cabecera"></a></li>
+                    <li><a href="lista-mascotas.html"><input type="button" Value="Tus mascotas" class="Boton--cabecera"></a></li>
+                    <li id="estado-sesion"></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class = "contenedor_formulario">
+        <a class="btn_pagar" id="btn_pagar"><input type="button" value="Volver"></a>
+        <a href="mascota.html" class="btn_nuevo"><input type="button" value="+"></a>
+
+        <form class="lista-mascotas">
+            <div class="form_registro--Parte2">
+                <div>
+                    <div class="titulo">
+                        <h3 class="form_registro--titulo2">Tus mascotas</h3>
+                    </div>
+                    <div class="user-info">
+                        <ul class="registrados" id="registrados"></ul>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="javascript/lista-mascotas.js"></script>
+</body>
+</html>

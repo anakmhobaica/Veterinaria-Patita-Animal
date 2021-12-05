@@ -1,0 +1,252 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'DM Sans', sans-serif;
+  position: relative;
+}
+
+body{
+  border-bottom: 30px solid #085271;
+  margin: 0;
+  background-image: url(../images/Perritos.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position:right;
+}
+
+.list-group-item{
+  border-radius: 15px;
+  padding: 10px;
+  padding-top: 0px;
+  margin: 20px;
+  max-width: 30%;
+  min-width: 300px;
+  display: inline-block;
+  background:#085271;
+  border: 3px solid #004a69;
+  box-shadow: .5rem .5rem .5rem #26586d;
+  color: #fff;
+}
+
+.barra li {
+
+  float: left;
+  text-align: center; 
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 15px;
+  margin-bottom: 0px;
+  font-size: 16px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.login {
+  color: black;
+  border: 1px black;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.login:hover{
+
+  color: white;
+  transition: all .3s;
+
+}
+
+#estado-sesion a {
+  margin-right: 17px;
+  text-decoration: none;
+}
+
+.options {
+  list-style-type: none;
+  margin: 0;
+  padding: 5px;
+  overflow: hidden;
+  background-color: #085271;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 58px;
+}
+
+.list-group-item{
+  padding: 15px;
+}
+
+.Boton-cabecera{
+
+  background-color: #085271;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  transition: all .4s;
+  cursor: pointer;
+  font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+.Boton-cabecera:hover{
+
+  background-color: #02a352;
+  outline: 20px solid #02a352;
+  transition: all .4s;
+}
+
+form{
+
+  width: 40vw;
+  min-width: 400px;
+  margin: auto;
+  padding: 30px;
+  border: 3px solid #004a69;
+  border-radius: 15px;
+  box-shadow: .5rem .5rem .5rem #26586d;
+  background:#085271;
+  color: #fff;
+
+}
+
+.form-control{
+
+  width: 100%;
+  height: 30px;  
+  display: block;
+  margin: 15px auto;
+  border-radius: 5px;  
+  border-style: solid; 
+  border-width: 1px; 
+  border-color: #02a352;
+  padding-left: 5px;
+
+}
+
+h2{
+
+  text-align: center;
+
+}
+
+.btn-success{
+
+    display: block;
+    width: 150px;
+    height: 35px; 
+    padding-left: 5px;
+    padding-right: 5px;     
+    text-transform: uppercase;
+    background-color: #009926; 
+    border-color: #009926; 
+    border-style: solid; 
+    border-radius: 10px; 
+    width: 420px;   
+    cursor: pointer;
+    margin: auto;
+    margin-top: 20px;
+    color: white;
+
+}
+
+.btn-success:hover{
+
+  box-shadow: .3rem .3rem .3rem #2f5d70;
+  transition: all .5s;
+
+}
+
+textarea{
+
+  width: 100%;
+  height: 200px;
+  display: block;
+  margin: auto;
+  border-radius: 5px;  
+  border-style: solid; 
+  border-width: 1px; 
+  border-color: #02a352;
+
+}
+
+.btn-danger{
+
+  background: rgb(179, 0, 0);
+  display: block;
+  border:none;
+  margin: auto;
+  color: #fff;
+  border-radius: 15px;
+  width: 130px;
+  height: 30px;
+  transition: all .2s;
+
+}
+
+.btn-danger:hover{
+
+  box-shadow: .3rem .3rem .3rem rgb(119, 0, 0);
+  transition: all .5s;
+
+}
+
+/*Boton de pagar*/
+
+.btn_pagar{
+  position: absolute;
+  width: 150px;
+  left: 50px;
+  top: 53px;
+  z-index: 10;
+}
+
+.btn_pagar input{
+
+  background-color: red;
+  border-radius: 10px;
+  color: #fff;
+  width: 100%;
+  height: 30px;  
+  display: block;
+  margin: 15px auto;
+  border-radius: 10px;  
+  border-style: solid; 
+  border-width: 0px; 
+  padding-left: 5px;
+  cursor: pointer;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.btn_pagar input:hover{
+  background-color: rgb(143, 7, 7);
+}
+
+.btn-pay {
+  background: rgb(0, 159, 0);
+  display: block;
+  border:none;
+  margin: auto;
+  color: #fff;
+  border-radius: 15px;
+  width: 130px;
+  height: 30px;
+  transition: all .2s;
+}
+
+.btn-pay:hover{
+
+  box-shadow: .3rem .3rem .3rem rgb(0, 119, 0);
+  transition: all .5s;
+
+}
+
+.btn-pay:disabled {
+  background-color: gray;
+  box-shadow: none;
+}
+
+.borrar {
+  float: left;
+}
+
+.pagar {
+  float: right;
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Agendar Citas</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="shortcut icon" href="images/logopa.png" type="image/x-icon"> 
+</head>
+<body>
+    <div class="barra">
+        <nav>
+            <div class="navbar">
+                <ul class="options">
+                    <li><a href="index.html"><input type="button" Value="Inicio" class="Boton-cabecera"></a></li>
+                    <li><a href="agendar-cliente.html"><input type="button" Value="Agendar una cita" class="Boton-cabecera"></a></li>
+                    <li><a href="lista-mascotas.html"><input type="button" Value="Tus mascotas" class="Boton-cabecera"></a></li>
+                    <li id="estado-sesion"></li>
+
+                </ul> 
+            </div>
+        </nav>
+    </div>
+
+    <a class="btn_pagar" id="btn_pagar"><input type="button" value="Volver"></a>
+    <div class="container mt-5 p-5">
+        <div class="row"> 
+            <div class="col-md-6 agregar-cita">
+                <h2 class="text-center my-4">Agenda de Citas</h2>
+                <form>
+                    <div class="form-group row">
+                                <label class="col-sm-4 col-lg-4 col-form-label">Nombre Mascota:</label>
+                                <div class="col-sm-8 col-lg-8">
+                                    <input type="text" id="mascota" class="form-control" placeholder="Nombre Mascota" required>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-4 col-lg-4 col-form-label">Nombre Dueño:</label>
+                                <div class="col-sm-8 col-lg-8">
+                                    <input type="text" id="cliente" disabled class="form-control"  placeholder="Nombre Dueño de la Mascota" required>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-4 col-lg-4 col-form-label">Teléfono:</label>
+                                    <div class="col-sm-8 col-lg-8">
+                                        <input type="tel" id="telefono" class="form-control"  placeholder="Número de Teléfono" required>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-4 col-lg-4 col-form-label">Fecha:</label>
+                                    <div class="col-sm-8 col-lg-8">
+                                        <input type="date" id="fecha" class="form-control" required>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group row">
+                                    <label class="col-sm-4 col-lg-4 col-form-label">Hora:</label>
+                                    <div class="col-sm-8 col-lg-8">
+                                        <input type="time" id="hora" class="form-control" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label class="col-sm-4 col-lg-4 col-form-label">Sintomas:</label>
+                                    <div class="col-sm-8 col-lg-8">
+                                    <textarea id="sintomas" class="form-control" required></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group row justify-content-end">
+                                <div class="col-sm-3">
+                                    <button type="submit" class="btn btn-success w-100">Agregar</button>
+                                </div>
+                            </div>
+                        </form>
+            </div>
+            
+            <div class="col-md-6">
+                <h2 id="administra" class="text-center my-4"></h2>
+                <ul id="citas" class="list-group">
+                    
+                </ul>
+            </div>
+        </div>
+
+        
+    </div>
+
+    <script src="javascript/cita.js"></script>
+    
+</body>
+</html>

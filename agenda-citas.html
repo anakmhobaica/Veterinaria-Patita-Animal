@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda de citas</title>
+    <link rel="stylesheet" href="css/agenda-citas.css">
+    <link rel="shortcut icon" href="images/logopa.png" type="image/x-icon"> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+  <div class="barra"> 
+    <nav>
+        <div class="navbar">
+            <ul class="options">
+                <li><a href="index.html"><input type="button" Value="Inicio" class="Boton--cabecera"></a></li>
+                <li><a href="agenda-citas.html"><input type="button" Value="Agenda" class="Boton--cabecera"></a></li>
+                <li><a href="lista-clientes.html"><input type="button" Value="Lista de clientes" class="Boton--cabecera"></a></li>
+                <li><a href="historial-medico.html"><input type="button" Value="Historial de mascotas" class="Boton--cabecera"></a></li>
+                <li id="estado-sesion"></li>
+            </ul>
+        </div>
+    </nav>
+  </div>
+    <div class='container'> 
+      <a class="btn_pagar" id="btn_pagar"><input type="button" value="Volver"></a>
+        <div class='window'>
+          <div class='order-info'>
+            <div class='order-info-content'>
+              <div class="titulo-cita"><h2 class="titulo-cita">CITAS AGENDADAS</h2></div>
+                <div class="schedule">
+                  <ul class="date-list" id="lista-citas"></ul>
+                </div>
+            </div>
+          </div>
+              <div class='credit-info'>
+                <div class='credit-info-content'>
+                    <h2 class="titulo-datos">DATOS DE LA CITA</h2>
+                    <div class="pet-info" id="info-cita">
+                      <p> <i>Ninguna cita ha sido seleccionada.</i> </p>
+                    </div>
+                </div>
+
+                <div class="buttons">
+                  <div><button class="button-accept" id="button-accept" disabled>ACEPTAR</button></div>
+                  <div><button class="button-refuse" id="button-refuse" disabled>RECHAZAR</button></div>
+                </div>
+                
+              </div>
+            </div>
+      </div>
+      <script src="javascript/cita_veterinario.js"></script>
+</body>
+</html>

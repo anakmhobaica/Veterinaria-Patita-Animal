@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modificar datos del usuario</title>
+    <link rel="stylesheet" href="css/modificar-usuario.css">
+    <link rel="shortcut icon" href="images/logopa.png" type="image/x-icon"> 
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="barra" id="barra"></div>
+
+    <div class = "contenedor_formulario">
+        <a class="btn_pagar" id="btn_pagar"><input type="button" value="Volver"></a>
+        <form class="form_registro">
+        
+
+            <div class="form_registro--Parte2">
+
+                <div>
+                    <h3 class="form_registro--titulo2">DATOS DE LA CUENTA</h3>
+                    <div class="user-info">
+                        <input type="text" name="nombre" id= "nombre" class="form_registro--nombre" style="outline: none;" placeholder="Nombre">
+    
+                        <input type="text" name="apellido" id= "apellido" class="form_registro--nombre" style="outline: none;" placeholder="Apellido">
+    
+                        <input type="text" name="telefono" id= "telefono" class="form_registro--nombre" style="outline: none;" placeholder="Telefono">
+    
+                        <input type="text" name="correo" id= "correo" class="form_registro--nombre" style="outline: none;" placeholder="Correo">
+    
+                        <input type="password" name="pass" id= "pass" class="form_registro--nombre" style="outline: none;" placeholder="Contraseña">
+    
+                        <input type="password" name="confirmar-contrasena" id= "confirmar" class="form_registro--nombre" style="outline: none;" placeholder="Confirme su Contraseña">
+    
+                        <a href="#" id="actualizar"><input type="button" name="Registrate" value="Actualizar" class="form_registro--Registrar"></a>
+                    </div>
+
+                </div>
+                
+            </div>
+
+        </form>
+
+    </div>
+
+    <script src="javascript/modificar-usuario.js"></script>
+</body>
+</html>

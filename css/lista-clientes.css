@@ -1,0 +1,182 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+}
+
+body{
+    border-bottom: 30px solid #085271; 
+}
+
+.barra li {
+    position: bottom;
+    float: left;
+    text-align: center; 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 15px; 
+    margin-bottom: 0px;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.login {
+    color: black;
+    border: 1px black;
+    
+}
+
+.login:hover{
+
+  color: white;
+  transition: all .3s;
+
+}
+
+.options {
+    list-style-type: none;
+    margin: 0;
+    padding: 5px;
+    overflow: hidden;
+    background-color: #085271;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 58px;
+}
+
+.Boton--cabecera{
+
+    background-color: #085271;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    transition: all .4s;
+    cursor: pointer;
+}
+
+.Boton--cabecera:hover{
+
+    background-color: #02a352;
+    outline: 20px solid #02a352;
+    transition: all .4s;
+}
+
+#estado-sesion a {
+    margin-right: 17px;
+    text-decoration: none;
+}
+
+.contenedor_formulario{
+    height:100%;
+    -webkit-box-pack:center;
+    -webkit-justify-content:center;
+    -ms-flex-pack:center;
+    justify-content:center;
+    -webkit-box-align:center;
+    -webkit-align-items:center;
+    -ms-flex-align:center;
+    align-items:center;
+    display:flex;
+    background-image: url(https://static4.abc.es/media/sociedad/2020/12/26/batiburrillo-mascotas-kBiG--620x349@abc.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position:center;
+    height: 100vh;
+}
+
+.titulo {
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 25px;
+    color: #fff;
+}
+
+.lista-clientes{
+
+    margin: auto;
+    margin-top: 50px;
+    width: 450px;
+    height: 670px;
+    border-radius: 15px;
+    display: block;
+    box-shadow: 0 1rem 1rem #00000080,0 1rem 1rem #00000080;
+    border: none;
+    background-color: #085271;
+
+}
+
+ul li {
+    list-style:none;
+    padding-left:10px;
+  }
+
+.clientes{
+    margin: 10px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.data-cliente{
+    font-size: 14px;
+}
+
+.div-disable{
+    display: flex;
+    align-items: right;
+    justify-content: end;
+}
+
+.user-info{
+    overflow-y: scroll;
+    max-height: 570px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.button-disable{
+    background-color: red;
+    border: none;
+    margin: 5px;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.button-disable:hover{
+    background-color: rgb(143, 7, 7);
+  }
+
+.button-disable:disabled{
+    background-color: gray;
+    cursor:default;
+}
+
+.btn_pagar{
+
+    position: absolute;
+    width: 150px;
+    left: 50px;
+    top: 10px;
+}
+
+.btn_pagar input {
+    border: none;
+    background-color: red;
+    border-radius: 10px;
+    color: #fff;
+    width: 150px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.btn_pagar input:hover{
+    background-color: rgb(143, 7, 7);
+}

@@ -1,0 +1,592 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.contenedor{
+    width: 90%;
+    max-width: 1200px;
+    overflow: hidden;
+    margin: auto;
+    padding: 45px 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    z-index: 1;
+}
+
+.contenedor-fluido{
+    overflow: hidden;
+    margin: auto;
+    padding: 45px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.barra li {
+    position: bottom;
+    float: left;
+    text-align: center; 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 15px;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.barra{
+    position: sticky; 
+    top: 0px;
+    z-index: 100;
+}
+
+.login {
+    color: black;
+    border: 1px black;
+}
+
+.options {
+    list-style-type: none;
+    margin: 0;
+    padding: 5px;
+    overflow: hidden;
+    background-color: #085271;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 58px;
+}
+
+.titulo{
+    font-size: 45px;
+    margin-bottom: 15px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.subtitulo{
+    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 300;
+    color: rgb(0, 0, 0);
+    margin-bottom: 40px;
+    font-size: 40px;
+}
+
+.info-letra{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header{
+    height: 70vh;
+    background-image: linear-gradient(120deg, rgba(161, 196, 253, 0.296) 0%, rgba(194, 233, 251, 0.296) 100%), url(../images/clinica-veterinaria-prueba.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position:center;
+}
+
+.head{
+    padding: 0;
+    display: flex;
+    height: 90%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.img-inicio{
+    width: 290px;
+}
+
+#mision{
+    margin-top: 70px;
+}
+
+.contenedor-mision{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.contenedor-mision img{
+    width: 30%;
+}
+
+.info-mision{
+    width: 45%;
+    text-align: justify;
+    font-size: 130%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.contenedor-vision{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.contenedor-vision img{
+    width: 30%;
+}
+
+.info-vision{
+    width: 45%;
+    text-align: justify;
+    font-size: 130%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.services{
+    margin: 2cm 3cm 2cm;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 75px;
+    justify-content: center;
+}
+
+div.cuadro1 {
+    width: 320.4px;
+    height: 602.367px;
+    background-color: #A1C5FD ;
+    border-radius: 20px;
+    overflow: hidden;
+}
+h3 {
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.imagen{
+    height: 350px;
+    background-size: cover;
+    background: grey;
+}
+div.infor {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 8px 16px 16px 16px;
+    font-size: 16px;
+    text-align: center;
+}
+
+p.par {
+    color: rgb(56, 56, 56);
+}
+
+div.letras {
+    color: #e01304; 
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.contenedor-galeria{
+    display: flex;
+    justify-content: space-between;
+    /*flex-wrap: wrap;*/
+    margin: auto;
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+}
+
+.slider {
+
+    display: block;
+    position: absolute;
+    opacity: 0;
+    padding-left: 0px;
+    margin: auto;
+    width: 100%;
+    transition: opacity .5s;
+
+}
+
+.contenedor-galeria .slider:first-child{
+
+    opacity: 1;
+    transition: opacity .5s;
+
+}
+
+.contenedor-galeria .slider:target{
+
+    opacity: 1;
+    transition: opacity .5s;
+
+}
+
+.img-galeria{
+    width: 310px;
+    display: inline-block;
+    box-shadow: rgba(0, 0, 0, 0.508);
+    position: relative;
+    margin: auto;
+    
+}
+
+.img-centrar{
+
+    display: flex;
+    margin: auto;
+    justify-content: center;
+
+}
+
+.nav-slider{
+
+    display: flex;
+    margin: auto;
+    width: 135px;
+    padding-top: 30px;
+    justify-content: space-evenly;
+}
+
+.nav-slider a input{
+
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    transition: all .5s;
+    background-color: #085271;
+    color: #085271;
+    border: 1px solid #085271;
+
+}
+
+.nav-slider a input:hover{
+
+    width: 45px;
+    height: 45px;
+    transition: all .5s;
+
+}
+
+#estado-sesion a {
+    margin-right: 15px;
+}
+
+/*footer*/
+footer{
+    background-color: #085271;
+    padding-bottom: 0.1px;
+}
+
+.footer-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+.brand{
+    font-weight: 500;
+    font-size: 40px;
+    color: #ffffff;
+}
+
+.brand+p{
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.social-media{
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.social-media-icon{
+    display: inline-block;
+    margin-left: 20px;
+    width: 60px;
+    height: 60px;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 50%;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+.social-media-icon:hover{
+    background: rgb(0, 0, 0);
+    color: #2483C5;
+}
+
+.social-media-icon i{
+    font-size: 30px;
+    line-height: 60px;
+}
+
+.line{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 2px;
+    background: #ffffff;
+    margin-bottom: 60px;
+}
+
+.subtitulo-contact{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-top: 70px;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 300;
+}
+
+.firma {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #fff;
+    font-size: 12px;
+    margin: 15px;
+    text-align: center;
+}
+
+.warpper{
+    display:flex;
+    flex-direction: column;
+    align-items: start;
+    margin: auto; 
+    max-width: 1250px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 50px;
+    margin-bottom: 90px;
+}
+  
+.tab{
+    cursor: pointer;
+    padding:10px 20px;
+    margin:0px 2px;
+    background:#085271;
+    display:inline-block;
+    color:#fff;
+    border-radius:3px 3px 0px 0px;
+    box-shadow: 0 0.5rem 0.8rem #00000080;
+}
+.panels{
+    background:#fffffff6;
+    box-shadow: 0 2rem 2rem #00000080;
+    min-height:400px;
+    width: 100%;
+    border-radius:3px;
+    overflow:hidden;
+    padding:20px;  
+}
+.panel{
+    display:none;
+    animation: fadein .8s;
+}
+.panel-title{
+    font-size:1.5em;
+    font-weight:bold
+}
+.radio{
+    display:none;
+}
+  #one:checked ~ .panels #one-panel,
+  #two:checked ~ .panels #two-panel,
+  #three:checked ~ .panels #three-panel{
+    display:block
+}
+  #one:checked ~ .tabs #one-tab,
+  #two:checked ~ .tabs #two-tab,
+  #three:checked ~ .tabs #three-tab{
+    background:#fffffff6;
+    color:#085271;
+    border-top: 3px solid #085271;
+}
+  
+.direccion {
+    display: flex;
+    justify-content: space-between;
+    z-index: 0;
+}
+.dir {
+    background-image: url(https://hospitalveterinarioalcala.com/wp-content/uploads/2019/12/ubicaIzq-1024x398.png);
+    background-size: cover;
+    height: 450px;
+    position: relative;
+    background-position: right;
+    width: 600px;
+    margin-left: 24px;
+    display: flex;
+    align-items: center;
+    z-index: 3;
+}
+  
+.contact {
+    background-image: url(https://hospitalveterinarioalcala.com/wp-content/uploads/2019/12/ubicaDere-1024x398.png);
+    background-size: cover;
+    height: 450px;
+    position: relative;
+    background-position: left;
+    width: 600px;
+    margin-right: 24px;
+    display: flex;
+    align-items: center;
+    z-index: 3;
+    align-items: end;
+    justify-content: center;
+    text-align: right;
+    flex-direction: column;
+}
+  
+.contact_form{  
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 550px; 
+    display: flex; 
+    justify-content: center;
+    height: auto;
+    border-radius: 10px;    
+    padding-left: 10px; 
+}
+  
+.input-form{
+    background-color: #fbfbfb; 
+    width: 408px; 
+    height: 40px; 
+    border-radius: 5px;  
+    border-style: solid; 
+    border-width: 1px; 
+    border-color: #02a352; 
+    margin-top: 5px;  
+    padding-left: 5px;
+    margin-bottom: 15px; 
+}
+  
+textarea{
+    background-color: #fbfbfb; 
+    width: 405px; 
+    height: 100px; 
+    border-radius: 5px;  
+    border-style: solid; 
+    border-width: 1px; 
+    border-color: #02a352; 
+    margin-top: 5px;  
+    padding-left: 5px;
+    margin-bottom: 15px; 
+    padding-top: 10px; 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+}
+  
+label{
+    display: block; 
+    float: center;  
+}
+  
+.boton-form {
+    height: 45px; 
+    padding-left: 5px;
+    padding-right: 5px;     
+    text-transform: uppercase;
+    background-color: #02a352; 
+    border-color: #02a352; 
+    border-style: solid; 
+    border-radius: 10px;  
+    width: 420px;   
+    cursor: pointer;
+}
+  
+form p {
+    margin: 0px;
+}
+  
+button p{
+    color: #fff; 
+}
+  
+span{
+    color: #02a352; 
+}
+  
+.aviso{
+    font-size: 10px;  
+    color: #0e0e0e;  
+}
+  
+.title{
+    font-size: 28px;   
+    color: #085271;
+}
+  
+.subtitle{
+    font-size: 17px;
+}
+  
+.p-form{
+    font-size: 14px; 
+    color: #0e0e0e; 
+}
+  
+::-webkit-input-placeholder {
+   color: #a8a8a8;
+}
+  
+::-webkit-textarea-placeholder {
+   color: #a8a8a8;
+}
+  
+.formulario input:focus{
+    outline:0;
+    border: 1px solid #085271;
+}
+  
+.formulario textarea:focus{
+    outline:0;
+    border: 1px solid #085271;
+}
+
+#sendtoinbox{
+    opacity: 0;
+    cursor: default;
+}
+
+a{
+
+    text-decoration: none;
+    color: white;
+    transition: all .3s;
+
+}
+
+a:hover{
+
+    color: black;
+    transition: all .3s;
+
+}
+
+.login:hover{
+
+    color: white;
+    transition: all .3s;
+
+}
+
+.linea_divisora{
+
+    border-top: 1px solid black;
+    width: 90%;
+    margin: 20px 0;
+
+}
+
+/*BOTONES DE LA CABECERA*/
+
+.Boton--cabecera{
+
+    background-color: #085271;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    transition: all .4s;
+    cursor: pointer;
+}
+
+.Boton--cabecera:hover{
+
+    background-color: #02a352;
+    outline: 20px solid #02a352;
+    transition: all .4s;
+}

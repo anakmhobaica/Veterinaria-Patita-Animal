@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historial de mascotas</title>
+    <link rel="stylesheet" href="css/historial-medico.css">
+    <link rel="shortcut icon" href="images/logopa.png" type="image/x-icon"> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+
+    <div class="barra"> 
+        <nav>
+            <div class="navbar">
+                <ul class="options">
+                    <li><a href="index.html"><input type="button" Value="Inicio" class="Boton--cabecera"></a></li>
+                    <li><a href="agenda-citas.html"><input type="button" Value="Agenda" class="Boton--cabecera"></a></li>
+                    <li><a href="lista-clientes.html"><input type="button" Value="Lista de clientes" class="Boton--cabecera"></a></li>
+                    <li><a href="historial-medico.html"><input type="button" Value="Historial de mascotas" class="Boton--cabecera"></a></li>
+                    <li id="estado-sesion"></li>
+                </ul>
+            </div>
+        </nav>
+      </div>
+
+    <div class='container'> 
+        <a class="btn_pagar" id="btn_pagar"><input type="button" value="Volver"></a>
+        <input type="button" class="btn_nuevo" id="nuevo-historial" value="+">
+        <div class='window'>
+          <div class='order-info'>
+            <div class='order-info-content'>
+              <div class="titulo-cita"><h2 class="titulo-cita">LISTA DE HISTORIALES</h2></div>
+                <div class="schedule">
+                  <ul class="date-list" id="lista-historiales"></ul>
+                </div>
+            </div>
+          </div>
+              <div class='credit-info'>
+                <div class='credit-info-content'>
+                    <h2 class="titulo-datos">CONTENIDO</h2>
+                    <div class="history-info">
+                        <form id="form-historial">
+                            <div class="form-group row">
+                                <label class="campo-info">Nombre Mascota:</label>
+                                <div class="div-campo-info">
+                                    <input type="text" id="mascota" class="form-control" placeholder="Nombre de la mascota" required>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="campo-info">Nombre Dueño:</label>
+                                <div class="div-campo-info">
+                                    <input type="text" id="cliente" class="form-control"  placeholder="Nombre del dueño" required>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="campo-info">Fecha:</label>
+                                <div class="div-campo-info">
+                                    <input type="date" id="fecha" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="campo-info">Motivo de la Consulta:</label>
+                                <div class="div-campo-info">
+                                    <input type="text" id="motivo" class="form-control"  placeholder="Motivo de la consulta:" required>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="campo-info">Especificaciones:</label>
+                                <div class="div-campo-info">
+                                    <textarea id="especificaciones" class="form-control-es" required></textarea>
+                                </div>
+                            </div>
+                            <div class="buttons">
+                              <div><button class="button-update" id="guardar-historial" type="submit">GUARDAR</button></div> 
+                              <div><button class="button-delete" disabled="true" id="delete-historial">ELIMINAR</button></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+              </div>
+            </div>
+      </div>
+      <script src="javascript/historial-medico.js"></script>
+</body>
+</html>
